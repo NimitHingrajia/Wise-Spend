@@ -1,6 +1,8 @@
 import About from "@/components/About";
 import Image from "next/image";
 import Services from "@/components/Services";
+import Signin from "@/components/Signin";
+import SignUp from "@/components/Signup";
 
 export default function Home() {
   return (
@@ -13,6 +15,8 @@ export default function Home() {
       />
       <About />
       <Services />
+      <Signin />
+      <SignUp />
     </div>
   );
 }
