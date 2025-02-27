@@ -28,7 +28,7 @@ export default function RootLayout({
   const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
 
   const NAV_DATA = [
-    { name: "ABOUT", link: `${baseUrl}/#doctors` },
+    { name: "ABOUT", link: `${baseUrl}/#about` },
     { name: "SERVICES", link: `${baseUrl}/#services` },
   ];
 
@@ -81,6 +81,11 @@ export default function RootLayout({
             <p className="font-nunito text-sm">
               Boost your credit, build your future
             </p>
+            <p className="font-nunito font-semibold">Try our Services</p>
+            <p>Get free advices to build your credit</p>
+            <button className="font-nunito text-sm bg-[#A0E7E5] text-[#273444] px-4 py-2 square-md">
+              WiseSpend
+            </button>
           </div>
         </div>
       </body>

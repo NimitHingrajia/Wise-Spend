@@ -1,17 +1,18 @@
+import About from "@/components/About";
 import Image from "next/image";
+import Services from "@/components/Services";
 
 export default function Home() {
   return (
-    <div>
+    <div className="overflow-hidden">
       <Image
         src="/WiseSpend_logo.svg"
         alt="Wise-Spend logo"
         width={500}
         height={500}
       />
-
-<h1>Wise-Spend</h1>
-<p>Boost your credit, build your future</p>
+      <About />
+      <Services />
     </div>
   );
 }
