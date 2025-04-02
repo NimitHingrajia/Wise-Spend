@@ -15,23 +15,11 @@ const nunito = Nunito({
   variable: "--font-nunito",
 });
 
-// export const metadata: Metadata = {
-//   title: "Wise-Spend",
-//   description: "Boost your credit, build your future",
-// };
-
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const baseUrl = typeof window !== "undefined" ? window.location.origin : "";
-
-  const NAV_DATA = [
-    { name: "ABOUT", link: `${baseUrl}/#about` },
-    { name: "SERVICES", link: `${baseUrl}/#services` },
-  ];
-
   const router = useRouter();
 
   return (
@@ -52,20 +40,23 @@ export default function RootLayout({
               className="cursor-pointer tracking-wide"
               onClick={() => router.push("/")}
             />
-            <div className="flex gap-4 flex-wrap justify-center md:justify-end ml-4 md:ml-8 lg:ml-16">
-              {NAV_DATA.map((nav) => (
-                <a
-                  href={nav.link || ""}
-                  key={nav.link}
-                  className="font-nunito text-sm md:text-base hover:text-[#A0E7E5] transition duration-300"
-                >
-                  {nav.name}
-                </a>
-              ))}
+            <div className="flex gap-4 justify-end">
+              <a
+                href="#about"
+                className="font-nunito text-sm hover:text-[#A0E7E5] transition duration-300"
+              >
+                ABOUT
+              </a>
+              <a
+                href="#services"
+                className="font-nunito text-sm hover:text-[#A0E7E5] transition duration-300"
+              >
+                SERVICES
+              </a>
             </div>
             <div>
               <button className="font-nunito text-sm bg-[#A0E7E5] text-[#273444] px-4 py-2 square-md ml-4 md:ml-8 lg:ml-16">
-                Sign Up
+                SIGN UP
               </button>
             </div>
           </div>

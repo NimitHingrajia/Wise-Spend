@@ -1,8 +1,11 @@
+"use client";
+
 import About from "@/components/About";
 import Image from "next/image";
 import Services from "@/components/Services";
 import Signin from "@/components/Signin";
 import SignUp from "@/components/Signup";
+import Data from "@/components/Data";
 
 export default function Home() {
   return (
@@ -17,6 +20,7 @@ export default function Home() {
       <Services />
       <Signin />
       <SignUp />
+      <Data />
     </div>
   );
 }
